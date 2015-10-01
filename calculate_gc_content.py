@@ -21,9 +21,10 @@ with open(sys.argv[1], 'r') as fasta:
                 c_count += 1
             elif base == "G":
                 g_count += 1
-            else:
+            elif base == "T":
                 t_count += 1
-
+            else:
+                continue
 print("Base counts for file %s:" % sys.argv[1])
 print("A: %d" % a_count)
 print("C: %d" % c_count)
