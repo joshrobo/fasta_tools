@@ -22,8 +22,14 @@ with open(sys.argv[1], 'r') as fasta:
     base_total += (a_count + c_count + g_count + t_count)
 
 print("\nBase counts for file %s:" % sys.argv[1])
-print("A: %d" % a_count), "which is", round((float(a_count)/float(base_total)*100),1),"% of the total"
-print("C: %d" % c_count), "which is", round((float(c_count)/float(base_total)*100),1),"% of the total"
-print("G: %d" % g_count), "which is", round((float(g_count)/float(base_total)*100),1),"% of the total"
-print("T: %d" % t_count), "which is", round((float(t_count)/float(base_total)*100),1),"% of the total"
-print''
+print("\nFull length: %dbp" % base_total)
+print("Adenine (A) count: %d" % a_count), "which is",\
+    round((float(a_count)/float(base_total)*100),1), "%"
+print("Thymine (T) count: %d" % t_count), "which is",\
+    round((float(t_count)/float(base_total)*100),1), "%"
+print("Guanine (G) count: %d" % g_count), "which is",\
+    round((float(g_count)/float(base_total)*100),1), "%"
+print("Cytosine (C) count: %d" % c_count), "which is",\
+    round((float(c_count)/float(base_total)*100),1), "%"
+print "GC content is:",round((float(g_count+c_count)/float(base_total)*100),1),\
+    "%\n"
