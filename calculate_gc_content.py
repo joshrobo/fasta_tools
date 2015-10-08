@@ -22,7 +22,7 @@ with open(sys.argv[1], 'r') as fasta:
     base_total += (a_count + c_count + g_count + t_count)
 
 print("\nBase counts for file %s:" % sys.argv[1])
-print("\nFull length: %dbp" % base_total)
+print("\nFull length: %d" % base_total)
 print("Adenine (A) count: %d" % a_count), "which is",\
     round((float(a_count)/float(base_total)*100),1), "%"
 print("Thymine (T) count: %d" % t_count), "which is",\
