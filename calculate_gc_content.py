@@ -3,6 +3,11 @@
 # Command line script to calculate base frequency from a .fasta file
 
 import sys
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('.fasta', help='file to calculate')
+args = parser.parse_args()
 
 a_count = 0
 c_count = 0
